@@ -1,5 +1,11 @@
- #!/bin/bash
-
+#!/bin/bash
+# ____              ___  ____       _     __ _              ___           _   
+#|  _ \ ___  _ __  / _ \/ ___|     / \   / _| |_ ___ _ __  |_ _|_ __  ___| |_ 
+#| |_) / _ \| '_ \| | | \___ \    / _ \ | |_| __/ _ \ '__|  | || '_ \/ __| __|
+#|  __/ (_) | |_) | |_| |___) |  / ___ \|  _| ||  __/ |     | || | | \__ \ |_ 
+#|_|   \___/| .__/ \___/|____/  /_/   \_\_|  \__\___|_|    |___|_| |_|___/\__|
+#           |_|               
+          
 #Atualizar a lista dos repositórios para o mirror da UFAL
 sudo echo "deb http://repositorio.nti.ufal.br/ubuntu/ focal main restricted universe multiverse
 deb-src http://repositorio.nti.ufal.br/ubuntu/ focal main restricted universe multiverse
@@ -18,7 +24,7 @@ deb http://apt.pop-os.org/proprietary focal main
 
 #Apps do repositório pré-instaldo
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y gnome-tweaks telegram-desktop discord vlc vim steam steam-devices
+sudo apt install -y qbittorrent openjdk-13-jdk-headless gdebi gnome-tweaks telegram-desktop discord vlc vim steam steam-devices gitkraken
 
 #Brave
 sudo apt install -y apt-transport-https curl gnupg
@@ -26,6 +32,10 @@ curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt
 sudo echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install -y brave-browser
+
+#Chrome
+wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+sudo gdebi -y google-chrome-stable_current_amd64.deb
 
 #Customização
 mkdir .themes .icons
