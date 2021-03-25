@@ -24,7 +24,7 @@ deb http://apt.pop-os.org/proprietary focal main
 
 #Apps do repositório pré-instaldo
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y obs-studio qbittorrent openjdk-13-jdk-headless gdebi gnome-tweaks telegram-desktop discord vlc vim steam steam-devices gitkraken
+sudo apt install -y wine obs-studio qbittorrent openjdk-13-jdk-headless gdebi gnome-tweaks telegram-desktop discord vlc vim steam steam-devices gitkraken
 
 #Brave
 sudo apt install -y apt-transport-https curl gnupg
