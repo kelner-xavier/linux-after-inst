@@ -24,7 +24,7 @@ deb http://apt.pop-os.org/proprietary focal main
 
 #Apps do repositório pré-instaldo
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y qbittorrent openjdk-13-jdk-headless gdebi gnome-tweaks telegram-desktop discord vlc vim steam steam-devices gitkraken
+sudo apt install -y obs-studio qbittorrent openjdk-13-jdk-headless gdebi gnome-tweaks telegram-desktop discord vlc vim steam steam-devices gitkraken
 
 #Brave
 sudo apt install -y apt-transport-https curl gnupg
@@ -32,6 +32,12 @@ curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt
 sudo echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install -y brave-browser
+
+#Anydesk
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
+echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
+apt update
+apt install anydesk
 
 #Chrome
 wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
