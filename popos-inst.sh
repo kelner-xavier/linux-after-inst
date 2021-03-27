@@ -26,6 +26,14 @@ deb http://apt.pop-os.org/proprietary focal main
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y wine obs-studio qbittorrent openjdk-13-jdk-headless gdebi gnome-tweaks telegram-desktop discord vlc vim steam steam-devices gitkraken
 
+#Flatpaks
+flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community
+
+#Lutris
+sudo add-apt-repository ppa:lutris-team/lutris
+sudo apt update
+sudo apt install lutris
+
 #Brave
 sudo apt install -y apt-transport-https curl gnupg
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
